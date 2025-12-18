@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Smart Attendance Calculator</h1>
+
+    <!-- Subject Inputs -->
+    <label>Subject Name</label>
+    <input type="text" id="subject" placeholder="Eg: Maths">
+
+    <label>Total Classes</label>
+    <input type="number" id="total" placeholder="Eg: 40">
+
+    <label>Attended Classes</label>
+    <input type="number" id="attended" placeholder="Eg: 32">
+
+    <button onclick="addSubject()">Add/Update Subject</button>
+    <button onclick="resetAll()">Reset All</button>
+
+    <p id="result"></p>
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Subject Table -->
+    <h3>Subjects List</h3>
+    <table id="subjectsTable">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Total Classes</th>
+                <th>Attended</th>
+                <th>Percentage</th>
+                <th>Status</th>
+                <th>Classes Info</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <hr>
+
+    <!-- Overall Attendance -->
+    <h2>Overall Attendance</h2>
+    <p id="overallResult">No data yet</p>
+    <div class="progress">
+        <div class="progress-bar" id="overallBar"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
